@@ -29,6 +29,21 @@
   * After reset the index of the dataframe, use the pivot() function to convert the DataFrame from the previous step so that the index is the "date," each column is a city "type," and the values are the "fare." 
     Index as date![image](https://user-images.githubusercontent.com/82353749/118289833-bb4d3400-b4a3-11eb-96de-fe88585b6a5c.png)
   * Create a new DataFrame from the pivot table DataFrame using loc on the given dates, '2019-01-01':'2019-04-29'. 
+    create new dataframe via loc()![image](https://user-images.githubusercontent.com/82353749/118319949-7dfb9d00-b4c9-11eb-997c-344bd599cd44.png)
+  * Reset the index of previous dataframe with pd.to_datetime(index)
+    Total fares from Jan to Apr![image](https://user-images.githubusercontent.com/82353749/118320303-07ab6a80-b4ca-11eb-9651-05724e097bec.png)
+  * Check the datatype of Jan_Apr_total_fares dataframe and make sure the the inset set as "date" and "DatetimeIndex" is available for further steps. 
+    Datetimerange index ![image](https://user-images.githubusercontent.com/82353749/118321005-fc0c7380-b4ca-11eb-9c10-7d1a162ab767.png)
+  * Create a new DataFrame using the "resample()" function by week 'W' and get the sum of the fares for each week. 
+    weekly_fares![image](https://user-images.githubusercontent.com/82353749/118321144-3249f300-b4cb-11eb-89c8-deb5e36b6f00.png)
+  * Using the object-oriented interface method, plot the resample DataFrame using the df.plot() function. 
+    Plotting weekly_fares dataframe![image](https://user-images.githubusercontent.com/82353749/118321347-763cf800-b4cb-11eb-83ef-81a2eba3f7e1.png)
+  * Final output: PyberChallenge_final.png![image](https://user-images.githubusercontent.com/82353749/118321453-9b316b00-b4cb-11eb-845a-600400147ecd.png)
+
+## Summary 
+1. The total fares between January 2019 to April 2019 by each city type varies based on the total driver counts and total rides occurred in different cities. 
+2. The total fares of Urban cities is the highest because overall population and rides supersede other two city types. Suburban total fares are less than Urban cities because fewer drivers and less populated, and the Rural cities holds the least total fares compared to the other two types, because of the minimal population and drivers. 
+3. The total fares of three city types peak around late February and declined through March, and went back up in early April, the increase of rides could be related to more frequent outings because of holidays and warmer weather. 
 
 
 
